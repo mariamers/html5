@@ -220,6 +220,7 @@ footer > p {
 	background-color: #66ccff;
 	outline: 3px solid #0099ff;
     border: 3px solid #006699;
+	width: 200px;
 }
 .botao a {
 	text-decoration: none;
