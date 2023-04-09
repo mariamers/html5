@@ -1,3 +1,42 @@
-# aulas
-aprendendo html!
-<a href="https://mariamers.github.io/html5/twice/#home">site do twice</a>
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 04 - Menus</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+    <div class="container">
+            <div class="titulo">
+          <h1>MASTERING UI DESIGN</h1>
+          </div>
+            <nav class="flex-container">      
+          <ul class="items">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Chapters</a></li>
+            <li><a href="#">Author</a></li>
+            <li><a href="#" class="button">Buy a copy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section>
+      <picture>
+        <source media="(max-width: 700px)" srcset="foto-p.png">
+        <source media="(max-width: 1000px)" srcset="foto-m.png">
+        <img src="foto-g.png" alt="imagem flexível">
+      </picture>
+    </section>
+    <a href="https://mariamers.github.io/html5/twice/#home">site do twice</a>
+  </body>
+</html>
+
