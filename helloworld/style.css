@@ -1,0 +1,81 @@
+/*
+SELETORES PERSONALIZADOS
+#   =   id
+.   =   class
+:   =   pseudo-class
+::  =   pseudo-element
+>   =   children
+
+.class::before {
+  content: "content";
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+  margin: 0;
+  width: 1490px;
+}
+
+.menu {
+  width: auto;
+  background-color: #403f3f;
+}
+
+.container {
+  width: 1200px;
+  height: 141px;
+  background-color: #403f3f;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  font-style: montserrat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: left;
+}
+
+nav ul li a {
+  padding: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a.button {
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.flex-container {
+  flex: auto;
+}
