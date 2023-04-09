@@ -190,3 +190,13 @@ main {
   margin: auto;
   padding: 30px;
 }
+
+li {
+  float: left;
+}
+footer {
+
+text-align: center;
+padding: 30px;
+color: white;
+}
