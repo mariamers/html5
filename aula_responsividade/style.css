@@ -1,6 +1,6 @@
 * {
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 auto;
 	text-decoration: none;
 }
 
@@ -29,20 +29,31 @@ header {
 	grid-area: header;
 	display: flex;
 	justify-content: space-between;
+	align-content: center;
+	padding-left: 1rem;
+
 }
 
 .menu {
 	display: flex;
 	flex-wrap: nowrap;
 	gap: 30px;
+	
 }
 
 .menu ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 30px;
-	align-items: center;
+	gap: 1rem;
+	list-style-type: none;
+}
+
+.menu ul li a {
+	color: black;
+	display: flex;
+	align-content: center;
+	padding: 1rem;
 
 }
 
@@ -63,6 +74,17 @@ h1 {
 	grid-area: title;
 }
 
+.button {
+	background-color: rgb(153, 152, 152);
+	border-radius: 1rem;
+	padding: 1rem;
+
+}
+
+.button:hover {
+	color: aliceblue;
+}
+
 @media (max-width: 700px) {
 	#wrapper {
 	padding-top: 2rem;
@@ -75,6 +97,7 @@ h1 {
 	"main"
 	"footer";
 	grid-template-rows: auto;
+	grid-template-columns: auto;
 	}
 
 	.menu ul {
