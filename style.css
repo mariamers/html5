@@ -103,3 +103,7 @@ a:hover {
   padding: 30px;
 }
 
+animation {
+  
+  animation: mymove color-mode alternate;
+}
