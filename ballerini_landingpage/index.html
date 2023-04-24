@@ -6,15 +6,26 @@
     <meta name="description" content="Um bot que irá moderar e deixar a sua comunidade segura de um jeito fácil"/>
     <title>Balle Bot - Modere a sua comunidade do Discord</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
-    <header>
-<img src="logo.svg" alt="logo da comunidade ballerini" class="logo_img">
-<nav class="menu_header">
-    <a href="#">Comunidade Ballerini</a>
-    <a href="#">Tutorial</a>
-    <a href="#">Open Source</a>
-    <a href="#">Comandos</a>
+    <header class="header">
+<img src="logo.svg" alt="logo da comunidade ballerini" class="logo">
+<nav class="nav">
+    <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >Menu<span class="hamburger"></span>
+        </button>
+<ul class="menu">
+    <li><a href="#">Comunidade Ballerini</a></li>
+    <li><a href="#">Tutorial</a></li>
+    <li><a href="#">Open Source</a></li>
+    <li><a href="#">Comandos</a></li>
+</ul>
 </nav>
     </header>
 

@@ -11,6 +11,7 @@
 body {
 	background-color: var(--cor0);
 	background-image: url(background.jpg);
+  background-size: cover;
 	font-family:'Courier New', Courier, monospace;
   font-size: 100%;
 }
@@ -101,9 +102,4 @@ a:hover {
 .rodape {
   text-align: center;
   padding: 30px;
-}
-
-animation {
-  
-  animation: mymove color-mode alternate;
 }

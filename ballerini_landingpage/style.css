@@ -8,37 +8,46 @@ font-family: 'Sarala', sans-serif; */
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    font-family: 'Sarala', sans-serif;
+    
 }
 
 body {
     font-size: 100%;
     background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+    padding: 1rem;
 }
 
-header {
+.header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 24px;
-}
+    padding: 1rem;
+    height: 6.8rem;
+  }
 
-.logo_img {
+.logo {
     height: 72px;
 }
 
-.menu_header {
+.menu {
     display: flex;
-    gap: 32px;
+    gap: 1.5rem;
 }
 
-.menu_header > a {
+.menu > li a {
     font-family: 'Sarala', sans-serif;
     color: rgba(255, 242, 231, 1);
     font-weight: 400;
     font-size: 18px;
+    display: block;
 
 }
+
+.btn-menu {
+    display: none;
+  }
 
 .content {
     border-top: 0.4px solid #FFF2E7;
@@ -130,3 +139,91 @@ footer img {
     display: block;
     margin: 0 auto;
 }
+  
+  @media (max-width: 700px) {
+
+    .header {
+        justify-content: space-between;
+    }
+    .menu {
+      display: block;
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);;
+      text-align: center;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+    .menu a {
+      padding: 1rem 0;
+      margin-inline: 1rem;
+      border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+      border-radius: 0;
+    }
+    .btn-menu {
+      background: none;
+      border: none;
+      font: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+    .hamburger {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+    }
+    .hamburger::after,
+    .hamburger::before {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+      position: relative;
+      transition: 0.3s;
+    }
+    .nav.active .menu {
+      height: calc(100vh - 7rem);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    .nav.active .hamburger {
+      border-top-color: transparent;
+    }
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -0.4375rem;
+    }
+
+    li:hover {
+        background-color: #8E5D52;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 1rem;
+    }
+
+    .principal-content {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .principal-content-img {
+        height: 30vh;
+    }
+  }
