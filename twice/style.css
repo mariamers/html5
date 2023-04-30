@@ -15,11 +15,13 @@ body {
 	background-image: url(background.jpg);
 	font-family:'Courier New', Courier, monospace;
 	font-weight: 700;
+	max-width: 100%;
 }
 
 main {
-	max-width: 1200px;
 	margin: 0px auto;
+	width: 80%;    
+
 }
 
 h1 {
@@ -177,10 +179,6 @@ footer > p {
 
 
 @media (max-width: 768px) {
-	
-	body {
-		width: fit-content;
-	}
 	
 	#icon {
 		width: 100%;

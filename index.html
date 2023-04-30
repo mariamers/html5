@@ -2,16 +2,17 @@
 <html lang="pt-BR" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <title>projetos de maria</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">
   </head>
   <body>
     <div id="wrapper">
     <header class="header">
-        <h1>Maria Ramos</h1>
-        <h2>Front-end developer</h2>
-        <h2>Web Designer</h2>
-
+        <h1 class="titulo transition">Maria Ramos</h1>
+        <h2 class="subtitulo transition">Front-end developer</h2>
+        <h2 class="subtitulo transition">Web Designer</h2>
         <div class="social-media">
           <a href="#">LinkedIn</a>
           <a href="#">Instagram</a>
@@ -19,24 +20,76 @@
         
     </header>
     <main class="main">
-      <div id="table" class="table-wrapper">
-        <div class="table-inner">
-            <table>
-                <thead>
-                    <tr>
-                        <th>projetos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                          <li><a href="https://mariamers.github.io/html5/twice/" target="_blank">Projeto 01: Site do Twice</a></li>
-                          <li><a href="https://mariamers.github.io/html5/ballerini_landingpage" target="_blank">Projeto 02: Landing Page</a></li>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <div id="table" class="table-wrapper transition">
+
+        <table class="infos">
+          <thead>
+              <tr>
+                  <th>sobre mim</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo placeat aut at ea error expedita praesentium doloribus laudantium facere? Repudiandae amet eveniet repellat excepturi deleniti quas fugiat odit corporis debitis!   
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      
+        <table class="projetos">
+            <thead>
+                <tr>
+                    <th>projetos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                      <li><a href="https://mariamers.github.io/html5/twice/" target="_blank">
+                        Projeto 01: Site do Twice</a></li>
+                        <li><a href="https://mariamers.github.io/html5/ballerini_landingpage" target="_blank">
+                          Projeto 02: Landing Page Ballerini</a></li>
+                          <li><a href="https://mariamers.github.io/html5/unforgiven" target="_blank">
+                            Projeto 03: Landing Page Unforgiven</a></li>
+                            <li><a href="https://mariamers.github.io/html5/projeto-menu" target="_blank">
+                              Projeto 05: Menu</a></li>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+      <table class="curriculo">
+        <thead>
+            <tr>
+                <th colspan="3">currículo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>2021</td>
+              <td>Comunicação em Mídias Digitais</td>
+              <td>UFPB</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="projetos">
+      <thead>
+          <tr>
+              <th>projetos</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>
+                <li><a href="https://mariamers.github.io/html5/twice/" target="_blank">Projeto 01: Site do Twice</a></li>
+                <li><a href="https://mariamers.github.io/html5/ballerini_landingpage" target="_blank">Projeto 02: Landing Page</a></li>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
     </div>
    </nav>
   </main>

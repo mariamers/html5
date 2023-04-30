@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {
+  background-color:#E7E9EB;
+}
+#myDIV {
+  height:300px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+#myDIV div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.item1 {
+  grid-area: 1 / 1 / span 2 / span 3;
+}
+</style>
+</head>
+<body>
+  <section>
+    <picture>
+      <source media="(max-width: 700px)" srcset="foto-p.png" type="image/png">
+      <source media="(max-width: 1000px)" srcset="foto-m.png" type="image/png">
+      <img src="foto-g.png" alt="imagem flexível">
+     
+      <audio preload="metadata" autoplay controls loop>
+        <source src="media/ttt.m4a" type="audio/x-m4a">
+        <p>Infelizmente o navegador não consegue reproduzir o áudio <a href="media/ttt.m4a">Clique aqui para baixar o arquivo m4a</a></p>
+      </audio>
+    </picture>
+  </section>
+<h1>The grid-area property</h1>
+
+<div id="myDIV">
+  <div class="item1">teste
+
+    aaaaa
+    <a href="#">oi</a>
+  </div>
+  <div class="item2"><button>ola</button></div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+</div>
+
+</body>
+</html>
+</head>
+<body>
+
+</body>
+</html>
