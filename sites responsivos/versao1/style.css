@@ -1,0 +1,149 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	background-color: var(--cor0);
+}
+
+#wrapper {
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"slider slider slider"
+	"main main main"
+	"footer footer footer";
+	grid-gap: 1rem;
+	grid-template-columns: 20vh auto auto;
+	grid-template-rows: auto auto 70vh auto;
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template-areas:
+	"logo menu";
+	grid-template-columns: 22vh auto;
+	grid-template-rows: 20vh;
+	grid-gap: 1rem;
+
+}
+
+.logo {
+	grid-area: logo;
+	border: 0.3rem solid red;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.menu {
+	grid-area: menu;
+	border: 0.3rem solid red;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.slider {
+	grid-area: slider;
+	padding: 3vh;
+	border: 0.3rem solid gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+
+}
+
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template-areas:
+	"conteudo1 conteudo2"
+	"conteudo3 conteudo4";
+	grid-gap: 1rem;
+}
+
+.conteudo1{
+	grid-area: conteudo1;
+	border: 0.3rem solid gray;
+}
+
+.conteudo2{
+	grid-area: conteudo2;
+	border: 0.3rem solid gray;
+}
+
+.conteudo3{
+	grid-area: conteudo3;
+	border: 0.3rem solid gray;
+
+}
+
+.conteudo4{
+	grid-area: conteudo4;
+	border: 0.3rem solid gray;
+
+}
+
+.main > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.footer {
+	grid-area: footer;
+	border: 0.3rem solid red;
+	padding: 3vh;
+	color: var(--cor1);
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 360px) {
+	
+		#wrapper {
+		display: grid;
+		grid-template-areas:
+		"header"
+		"slider"
+		"main"
+		"footer";
+		grid-gap: 1rem;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto 40vh auto;
+	}
+
+	.header {
+		grid-area: header;
+		display: grid;
+		grid-template-areas:
+		"logo" 
+		"menu";
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		grid-gap: 1rem;
+	}
+	.main {
+		grid-area: main;
+		display: grid;
+		grid-template-areas:
+		"conteudo1"
+		"conteudo2"
+		"conteudo3"
+		"conteudo4";
+		grid-gap: 1rem;
+	}
+
+
+}

@@ -1,0 +1,140 @@
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+	"cabecalho cabecalho cabecalho"
+    "menu menu menu"
+    "principal principal principal"
+    "rodape rodape rodape"
+    ;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto 70vh auto;
+    place-self: center;
+}
+
+  .wrapper div {
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho div {
+    padding: 2rem;
+}
+
+  .cabecalho {
+    grid-area: cabecalho;
+    display: grid;
+    grid-template-areas:
+    "logo promo1 promo1 promo1";
+
+  }
+
+  .logo {
+    grid-area: logo;
+    padding: 1rem;
+  }
+
+  .promo1 {
+    grid-area: promo1;
+    padding: 1rem;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .principal {
+    grid-area: principal;
+    display: grid;
+    grid-template-areas: 
+    "promo2 promo2 promo2 promo2"
+    "product product product product"
+    "navigation new new promo3"
+    "navigation new new promo4"
+    "navigation customer customer promo5"
+    "promo6 customer customer promo5"
+    ;
+    grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto auto;
+  }
+
+  .promo2 {
+    grid-area: promo2;
+  }
+
+  .product {
+    grid-area: product;
+  }
+
+  .navigation {
+    grid-area: navigation;
+  }
+
+  .new {
+    grid-area: new;
+  }
+
+  .customer {
+    grid-area: customer;
+  }
+
+  .promo3 {
+    grid-area: promo3;
+  }
+
+  .promo4 {
+    grid-area: promo4;
+  }
+
+  .promo5 {
+    grid-area: promo5;
+  }
+
+  .promo6 {
+    grid-area: promo6;
+  }
+
+  .rodape {
+    grid-area: rodape;
+  }
+
+  @media (max-width: 360px) {
+	
+    .wrapper {
+    display: grid;
+    grid-template-areas:
+    "cabecalho"
+    "menu"
+    "principal"
+    "rodape";
+    grid-gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 62vh auto;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    display: grid;
+    grid-template-areas:
+    "logo" 
+    "promo1";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.rodape {
+    grid-area: rodape;
+  }
+
+}

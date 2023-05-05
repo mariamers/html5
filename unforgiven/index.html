@@ -3,6 +3,7 @@
 	<head>
 		<title>Unforgiven</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -14,20 +15,18 @@
 					<h2 class="subtitle">new album by le sserafim</h2>
 					<img class="enterprise" src="enterprise.jpg" alt="hybe logo" width="100px">
 				</header>
-				<nav class="nav">
-					<ul class="menu">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Songs</a></li>
-						<li><a href="#">Members</a></li>
-						<li><a href="#">Photos</a></li>
-						<li><a href="#">Games</a></li>
-						<li><a href="#">FAQ</a></li>
-					</ul>
-
-				</nav>
-
-
+				<nav class="topnav" id="myTopnav">
+					<a href="#" class="active">Home</a>
+					<a href="#">About</a>
+					<a href="#">Songs</a>
+					<a href="#">Members</a>
+					<a href="#">Photos</a>
+					<a href="#">Games</a>
+					<a href="#">FAQ</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					  </a>
+					</nav>
 			<aside class="aside">Menu Lateral</aside>
 			<main class="main">
 		<div class="comment">
@@ -81,12 +80,19 @@
 								</a>
 								</li>
 							</ul>
-
 							<img src="footer.jpg" alt="footer logo" width="100vh">
-
-
-
 			</footer>
 		</div>
+		<script>
+
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+		</script>
 	</body>
 </html>
