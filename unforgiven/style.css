@@ -26,7 +26,8 @@ html{
 	"footer footer footer";
 	grid-template-columns: 30vh auto auto;
 	grid-template-rows: auto auto 70vh auto;
-	width: fit-content;
+	width: 100%;
+	flex-direction: row-reverse;
 }
 
 /*header*/
@@ -54,7 +55,7 @@ html{
     display: grid;
     grid-template-areas:
         "logo title title enterprise"
-        "logo subtitle subtitle subtitle";
+        "logo subtitle subtitle enterprise";
     align-items: center;
     grid-template-columns: 20vh auto auto 10vh;
     grid-template-rows: 5vh 6vh;
@@ -131,6 +132,8 @@ html{
     grid-area: comment;
     display: grid;
     grid-template-areas: "direita esquerda";
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
     gap: 1.5rem;
     padding: 1rem;
     border: 1px solid #737379;
@@ -158,13 +161,15 @@ html{
 }
 
 .footer > ul li a {
-	color: var(--cor1);
+	color: var(--cor2);
 }
   
 
 
   @media screen and (max-width: 600px) {
-	.topnav a:not(:first-child) {display: none;}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
 	.topnav a.icon {
 	  float: right;
 	  display: block;
@@ -172,7 +177,10 @@ html{
 	.topnav a.icon:hover {
 		color: var(--cor1);
 	}
-	.topnav.responsive {position: relative;}
+	.topnav.responsive {
+		position: relative;
+		
+	}
 	.topnav.responsive .icon {
 	  position: absolute;
 	  right: 0;
@@ -202,4 +210,17 @@ html{
 		padding-right: 1rem;
 		padding-left: 1rem;
 	}
+
+	.header-content {
+		display: none;
+	}
+
+
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+	}
+
   }
