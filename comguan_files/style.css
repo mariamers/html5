@@ -1,0 +1,215 @@
+:root {
+	--cor0: #000000;
+	--cor1: #ED1C24;
+	--cor2: #FFEECC;
+	--cor3: #f4f4f4;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+html{
+	min-width: 100vh;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wrapper {
+    background-color: var(--cor1);
+    /* display: grid; */
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+/*header*/
+
+.logo {
+	grid-area: logo;
+	position: relative;
+	width: 200px;
+	height: 1fr;
+}
+
+.header {
+	padding: 2rem;
+    grid-area: header;
+	gap: 0.2rem;
+    display: flex;
+	justify-content: center;
+	background-color: var(--cor1);
+}
+
+/*menu*/
+
+.topnav {
+	overflow: hidden;
+	grid-area: nav;
+	justify-content: space-around;
+	width: 100%;
+	background-color: var(--cor2);
+	display: flex;
+  }
+  
+  .topnav a {
+	float: left;
+	display: block;
+	text-align: center;
+	font-size: 17px;
+	font-weight: 400;
+	padding: 14px 16px;
+    font-size: 18px;
+	color: var(--cor1);
+  }
+
+  .topnav a:hover {
+	color: var(--cor0);
+  }
+  
+  .topnav .icon {
+	display: none;
+  }
+
+
+/*conteudo principal*/
+
+.main {
+	grid-area: main;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	/* width: max-content; */
+	/* height: fit-content; */
+	height: auto;
+	/* padding: 1rem; */
+}
+
+.direita {
+	grid-area: direita;
+}
+
+.esquerda {
+	grid-area: esquerda;
+	color: var(--cor2);
+}
+
+section {
+	/* width: 100vh; */
+}
+
+.biografia {
+    display: grid;
+    grid-template-areas:
+        "direita esquerda";
+    gap: 1.5rem;
+    padding: 3rem;
+    align-items: center;
+    background-color: var(--cor1);
+}
+
+.transition {
+    transition: .5s ease-in-out;
+}
+
+
+.discografia {
+    background-color: var(--cor2);
+    /* width: 100vh; */
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+.box {
+    background-color: var(--cor1);
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	color: var(--cor2);
+	font-size: 2rem;
+	gap: 2rem;
+	border-radius: 20px;
+}
+
+/*rodape*/
+
+
+.footer {
+	grid-area: footer;
+	background: var(--cor1);
+	padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+	flex-direction: row;
+	gap: 2rem;
+	align-items: center;
+
+}
+
+.footer > ul li a {
+	color: var(--cor2);
+}
+  
+
+
+  @media screen and (max-width: 600px) {
+	.topnav {
+		display: block;
+	}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon {
+	  float: right;
+	  display: block;
+	}
+	.topnav a.icon:hover {
+		color: var(--cor1);
+	}
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive .icon {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}		
+	
+	.topnav.responsive a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	#wrapper {
+		display: grid;
+		grid-template-areas:
+		"header header header"
+		"nav nav nav"
+		"aside aside aside"
+		"main main main"
+		"footer footer footer";
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto auto auto;
+	}
+
+	.biografia {
+		display: flex;
+		flex-direction: column;
+		padding: 3rem;
+		align-items: center;
+		background-color: var(--cor1);
+	}
+  }
