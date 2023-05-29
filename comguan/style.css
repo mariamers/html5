@@ -156,11 +156,7 @@ section {
 	min-height: 50vh;
 	width: 100%;
 	background-color: var(--cor1);
-}
-
-#discografia {
 	padding-top: 2rem;
-	scroll-behavior: smooth;
 }
 
 .biografia {
@@ -285,6 +281,8 @@ img {
 	.topnav {
 		display: block;
 		padding: 0;
+		z-index: 1;
+
 	}
 
 	.topnav a:hover {
@@ -342,9 +340,13 @@ img {
 		padding-bottom: 4rem;
 		}	
 		
-		.esquerda {
-			padding-top: 4rem;
-			}
+	.esquerda {
+		padding-top: 4rem;
+		}
+	.esquerda:hover {
+		-webkit-filter:grayscale(50%);
+		scale: 1;
+	}
 
 	.h1 {
 		background-color: none;
