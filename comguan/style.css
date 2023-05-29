@@ -278,9 +278,6 @@ img {
 	.topnav a:not(:first-child) {
 		display: none;
 	}
-	/*.topnav a:not(:first-child)::-ms-check {
-		display: none;
-	}*/
 
 	.topnav a.icon {
 	  float: right;
