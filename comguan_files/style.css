@@ -14,11 +14,11 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
-	scroll-behavior: smooth;
 }
 html{
 	font-family: 'Assistant';
-
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 #wrapper {
@@ -31,6 +31,9 @@ html{
 		"footer footer footer";
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
+	scroll-behavior: smooth;
+
+
 }
 
 .h1, h1 {
@@ -109,10 +112,12 @@ html{
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
-	/* width: max-content; */
-	/* height: fit-content; */
 	height: auto;
-	/* padding: 1rem; */
+}
+
+#discografia {
+	padding-top: 2rem;
+	scroll-behavior: smooth;
 }
 
 .biografia {
@@ -185,6 +190,10 @@ html{
 	gap: 2rem;
 	color: var(--cor1);
 
+}
+
+.social li a:hover {
+	color: var(--cor0);
 }
 
 .social-link {
@@ -269,6 +278,14 @@ img {
 		flex-direction: column;
 		align-items: center;
 	} 
+	.direita {
+		padding-top: 0;
+		padding-bottom: 4rem;
+		}	
+		
+		.esquerda {
+			padding-top: 4rem;
+			}
 
 	.h1 {
 		background-color: none;
