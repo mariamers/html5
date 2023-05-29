@@ -55,6 +55,7 @@ html{
 	grid-area: logo;
 	position: relative;
 	height: 50vh;
+	width: auto;
 	animation-name: movelogo;
 	animation-duration: 0.7s;
 	animation-iteration-count: infinite;
