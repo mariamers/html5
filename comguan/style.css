@@ -270,9 +270,7 @@ img {
 		display: block;
 		padding: 0;
 	}
-	.active {
-		display: none;
-	}
+
 	.topnav a:hover {
 		color: var(--cor0);
 		background: none;
@@ -280,6 +278,10 @@ img {
 	.topnav a:not(:first-child) {
 		display: none;
 	}
+	/*.topnav a:not(:first-child)::-ms-check {
+		display: none;
+	}*/
+
 	.topnav a.icon {
 	  float: right;
 	  display: block;
@@ -302,6 +304,8 @@ img {
 	  float: none;
 	  display: block;
 	  text-align: left;
+	  scale: 1;
+
 	}
   
 	#wrapper {
