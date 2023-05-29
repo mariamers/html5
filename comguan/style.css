@@ -14,16 +14,19 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
+
 }
 html{
 	font-family: 'Assistant';
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	transition: 0.1s ease-in-out;
+	min-width: 260px;
+	background-color: var(--cor1);
+
 }
 
 #wrapper {
-    background-color: var(--cor1);
     display: grid;
     grid-template-areas:
         "header header header"
@@ -149,6 +152,12 @@ html{
 	height: auto;
 }
 
+section {
+	min-height: 50vh;
+	width: 100%;
+	background-color: var(--cor1);
+}
+
 #discografia {
 	padding-top: 2rem;
 	scroll-behavior: smooth;
@@ -225,12 +234,19 @@ html{
 	padding: 0.4rem;
 
 }
+
 .social {
-	display: flex;
-	flex-direction: column;
 	padding: 5rem 2rem 5rem 3rem;
-	gap: 2rem;
+
+}
+.social li {
+	display: flex;
+	flex-direction: row;
 	color: var(--cor1);
+	align-items: baseline;
+	padding-bottom: 1rem;
+	padding-left: 3rem;
+	flex-wrap: nowrap;
 
 }
 
@@ -332,6 +348,10 @@ img {
 
 	.h1 {
 		background-color: none;
+	}
+
+	.social li {
+		padding: 0;
 	}
 
   }
