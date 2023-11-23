@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/header/Header'
 import Home from './components/home/Home'
 import Relatorios from './components/relatorios/Relatorios';
+import Tabela from './components/tabela/Tabela';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div>
         <Header />
         <Relatorios />
+        <Tabela />
 
       </div>
   )
