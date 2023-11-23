@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap');
+$primary:#0071BB;
+$secondary:#F68121;
+$spacer: 12px;
+$body-bg: #F4F4F4;
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-weight:        700;
+$headings-line-height:        1.2;
+$font-size-root: 16px;
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * .5;
+$font-size-lg: $font-size-base * 2;
+$h1-font-size:                $font-size-base * 1.5;
+$h2-font-size:                $font-size-base * 1.2;
+$h5-font-size:                $font-size-base * 1;
+
+
+// stylelint-enable value-keyword-case
+$font-family-base:"Work Sans";
+@import "../node_modules/bootstrap/scss/bootstrap";
