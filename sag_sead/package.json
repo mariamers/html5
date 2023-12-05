@@ -1,9 +1,16 @@
 {
+    "name": "sag-sead",
+    "version": "0.1.0",
+    "homepage": "https://gitname.github.io//html5/sag_sead",
     "private": true,
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+            +   "predeploy": "npm run build",
+            +   "deploy": "gh-pages -d build",
+                "start": "react-scripts start",
+                "build": "react-scripts build",
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
@@ -12,6 +19,7 @@
         "@vitejs/plugin-react": "^4.0.3",
         "autoprefixer": "^10.4.12",
         "axios": "^1.6.1",
+        "gh-pages": "^6.1.0",
         "laravel-vite-plugin": "^0.8.0",
         "postcss": "^8.4.18",
         "react": "^18.2.0",
