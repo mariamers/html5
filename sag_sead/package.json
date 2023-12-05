@@ -1,10 +1,10 @@
 {
+    "homepage": "https://mariamers.github.io/html5/tree/main/sag_sead",
     "name": "sag-sead",
     "version": "0.1.0",
-    "homepage": "https://mariamers.github.io/html5/tree/main/sag_sead",
     "private": true,
 },
-{
+
     "scripts": {
         "start": "node --experimental-detect-module index.js",
         "dev": "vite",
