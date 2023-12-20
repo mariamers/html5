@@ -1,18 +1,15 @@
 {
-    "homepage": "https://mariamers.github.io/html5/sag_sead",
-    "name": "sag-sead",
-    "version": "0.1.0",
+    "name": "sag sead",
+    "homepage": "https://mariamers.github.io/sag_sead/",
     "private": true,
-},
-
+    "type": "module",
     "scripts": {
-        "start": "node --experimental-detect-module index.js",
         "dev": "vite",
         "build": "vite build",
-         "predeploy": "npm run build",
-          "deploy": "gh-pages -d build",
-           "start": "react-scripts start",
-            "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
