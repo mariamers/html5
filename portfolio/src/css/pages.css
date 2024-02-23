@@ -1,0 +1,16 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    text-decoration: none;
+    color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
