@@ -12,14 +12,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+
 
 /*PADRÃO*/
 
 :root {
     --primaria: #F366A3;
     --secundaria: #939395;
+    --texto: #222222;
+
+}
+
+html {
+    min-width: 350px;
     font-family: "Roboto";
+    color: var(--texto);
 }
 
 h1,
@@ -65,7 +75,9 @@ button {
     border: none;
     border-radius: 10px;
     font-weight: 500;
-    font-family: "Roboto";
+    font-family: 'Roboto';
+    color: var(--texto);
+
 }
 button:hover {
     opacity: 100%;
@@ -129,7 +141,8 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--texto);
+
 }
 
 /* FIM DE NAVEGACAO */
@@ -148,6 +161,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #contato {
@@ -162,8 +177,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding: 2rem;
-    width: 85vh;
+    padding: 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -177,8 +191,7 @@ section {
 }
 
 #galeria {
-    width: 80%;
-    padding: 10px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,6 +220,8 @@ section {
 
 .p-contato p {
   padding-bottom: 1rem;
+  color: var(--texto);
+
 }
 
 .email-contato {
@@ -249,12 +264,21 @@ footer img {
 
     #header-container {
         background-size: cover;
-        height: 30vh;
+        height: fit-content;
 
     }
     #navegacao {
-        position: relative;
+        background-color: white;
+        width: 100%;
+        height: 5vh;
+        position: static;
+        padding: 5px;
+        display: flex;  
+        margin: 0 auto;      
+        justify-content: end;
     }
+
+
     header {
     display: flex;
     flex-direction: column;
@@ -263,6 +287,10 @@ footer img {
     .sobre-container {
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    #galeria {
         width: 100%;
     }
 
