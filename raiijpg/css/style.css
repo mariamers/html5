@@ -17,7 +17,7 @@
 /*PADRÃO*/
 
 :root {
-    --primaria: #ef5da8;
+    --primaria: #F366A3;
     --secundaria: #939395;
     font-family: "Roboto";
 }
@@ -35,11 +35,15 @@ h6 {
 }
 
 nav {
-    font-family: "Raleway";
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
 }
+/* FIM DE PADRÃO */
 
+/* COMPONENTES */
+
+/* linha rosa*/
 hr {
     width: 10vh;
     height: 3px;
@@ -47,8 +51,9 @@ hr {
     border-radius: 100px;
     background-color: var(--primaria);
     padding: 0;
-}
+} 
 
+/* botão rosa */
 button {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -65,91 +70,15 @@ button {
 button:hover {
     opacity: 100%;
 }
-/*CONTEUDO PRINCIPAL*/
 
-main {
-}
+button:active {
+    opacity: 80%;
+    scale: 98%;
 
-section {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-#contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/* FIM DE COMPONENTES */
 
-.sobre-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;
-    width: 85vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.apresentacao-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-}
-
-#galeria {
-    width: 80%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#galeria img {
-    width: 100%;
-    padding: 5px;
-}
-
-#galeria .galeria-row-2 img {
-    width: 33%;
-    height: fit-content;
-}
-
-.button-galeria {
-  align-self: end;
-  justify-self: end;
-  margin: 1rem;
-}
-
-.p-contato {
-  padding: 1rem;
-}
-
-.p-contato p {
-  padding-bottom: 1rem;
-}
-
-.email-contato {
-  font-weight: 800;
-  color: var(--secundaria);
-  font-style: normal;
-  padding-bottom: 1rem;
-}
-.social ul{
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-}
-/* FIM DE CONTEUDO PRINCIPAL*/
 
 /* CABECALHO */
 #header-container {
@@ -207,6 +136,95 @@ a {
 
 /* FIM DE CABECALHO */
 
+
+
+/*CONTEUDO PRINCIPAL*/
+
+main {
+}
+
+section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    width: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+#galeria {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#galeria img {
+    width: 100%;
+    padding: 5px;
+}
+
+#galeria .galeria-row-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.button-galeria {
+  align-self: end;
+  justify-self: end;
+  margin: 1rem;
+}
+
+.p-contato {
+  padding: 1rem;
+}
+
+.p-contato p {
+  padding-bottom: 1rem;
+}
+
+.email-contato {
+  font-weight: 800;
+  color: var(--secundaria);
+  font-style: normal;
+  padding-bottom: 1rem;
+}
+.social ul{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+/* FIM DE CONTEUDO PRINCIPAL*/
+
+
 /* RODAPE */
 
 footer {
@@ -224,3 +242,32 @@ footer img {
 }
 
 /* FIM DE RODAPE */
+
+/* MEDIA QUERY */
+
+@media (max-width: 700px) {
+
+    #header-container {
+        background-size: cover;
+        height: 30vh;
+
+    }
+    #navegacao {
+        position: relative;
+    }
+    header {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .sobre-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+
+
+
+}
