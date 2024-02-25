@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)http://127.0.0.1:5500/index.html#sobre -->
 <html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>raii.jpg</title>
         
@@ -7,11 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css"></head>
-    <body>
+    <body id="body" onscroll="rolar2 ()">
         <div id="header-container">
             <header>
                 <img src="./imagens/logo_light.png" alt="logo" class="logo-header">
-                <nav id="navegacao">
+                <nav id="navegacao" onmouseenter="entrar()" onmouseout="sair()">
                     <ul>
                         <li>
                             <a href="#inicio">Início</a>
@@ -76,14 +75,29 @@
             <img src="./imagens/logo_pink.png" alt="footer logo" width="100vh">
         </footer>
         <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
+          // var sobre = window.document.querySelector('#navegacao')
+          // sobre.style.background = 'var(--secundaria)' ;  
+          let lastKnownScrollPosition = 0;
+          let ticking = false;
+           var navega = window.document.getElementById('navegacao')
+           //var corpo = document.querySelector('#body')
+           function entrar() {
+             navega.style.background = 'var(--primaria)' 
+
+           }
+           function sair() {
+             navega.style.background = 'var(--secundaria)' 
+           }
+
+           //function rolar2() {
+          //  alert("User scrolled down!");
+
+          // }
+          // function rolar() {
+         //   alert('ok')
+
+          // }
+
         </script>
 
 </body></html>
