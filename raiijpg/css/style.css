@@ -337,8 +337,11 @@ footer img {
         height: fit-content;
     }
 
-
-
+    .galeria-projetos {
+        position: relative;
+        width: 16dvh;
+        height: 16dvh;
+      }
     header {
         display: flex;
         flex-direction: column;
