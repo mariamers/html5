@@ -193,6 +193,7 @@ section {
     width: 40%;
 }
 
+
 .sobre-img {
     display: flex;
     flex-direction: column;
@@ -350,6 +351,10 @@ footer img {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .sobre-container-p {
+        width: 100%;
     }
 
     #galeria {
