@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>raii.jpg</title>
-        
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"></head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
     <body id="body" onscroll="rolar2 ()">
         <div id="header-container">
             <header>
-                <img src="./imagens/logo_light.png" alt="logo" class="logo-header">
-                <nav id="navegacao" onmouseenter="entrar()" onmouseout="sair()">
+                <img src="./imagens/logo_light.png" alt="logo" class="header-logo" />
+                <nav id="navegacao">
                     <ul>
                         <li>
                             <a href="#inicio">Início</a>
@@ -24,80 +26,98 @@
                     </ul>
                 </nav>
             </header>
-            <div class="cover-header"></div>
+            <div class="header-cover"></div>
         </div>
 
         <main class="main">
             <section id="sobre">
                 <h2>Quem sou eu?</h2>
-				<hr>
+                <hr />
                 <div class="sobre-container">
-                    <img src="./imagens/rairasena.png" class="apresentacao-img">
-                    <p>Oii me chamo Raira Sena, assino na internet como Raii.jpg. Sou uma ilustradora de 24 anos, natural de João Pessoa e atualmente sou graduanda do curso de comunicação em mídias digitais. </p>
+                    <img src="./imagens/rairasena.png" class="sobre-img" />
+                    <div class="sobre-container-p">
+                    <p>
+                        Oii me chamo Raira, sou Ilustradora! Assino na internet como raii.jpg. Tenho 24 anos e sou
+                        natural de João Pessoa-PB. 
+                        
+                    </p>
+                    <p>Atualmente, estou terminando o curso de Comunicação Mídias Digitais
+                        na UFPB.
+                    </p>
+                </div>
                 </div>
             </section>
             <section id="portifolio">
                 <h2>Portifólio</h2>
-				<hr>
+                <hr />
 
                 <div id="galeria">
-					<div class="galeria-projetos">
-						<img src="./imagens/projetos/p1.png" alt="">
-					</div>
-					<div class="galeria-row-2">
-						<div class="galeria-projetos"><img src="./imagens/projetos/p2.png" alt=""></div>
-						<div class="galeria-projetos"><img src="./imagens/projetos/p3.png" alt=""></div>
-						<div class="galeria-projetos"><img src="./imagens/projetos/p4.png" alt=""></div>
-					</div>
-					<div class="galeria-projetos">
-						<img src="./imagens/projetos/p5.png" alt="">
-					</div>
-					<button class="button-galeria">Ver mais</button>
+                    <div class="galeria-projetos-lg">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p1.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                    </div>
+                    <div class="galeria-projetos-sm">
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p2.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p3.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
 
-					</div>
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p4.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
 
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p5.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
 
-            </section>
-            <section id="contato">
-                <h2>Contato</h2>
-				<hr>
-				<div class="p-contato">
-                <p>Precisando de ilustração para algum trabalho? </p>
-				<p>vamos conversar!</p>
-				</div>
-                <address class="email-contato">rairasenacontato@gmail.com</address>
-                <div class="social">
-                    <img src="./imagens/social.svg" alt="social">
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p6.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
+
+                        <div class="galeria-projetos">
+                            <img class="galeria-projetos-img" src="./imagens/projetos/p7.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
                 </div>
+                <button class="galeria-botao">Ver mais</button>
+
             </section>
         </main>
         <footer class="footer">
-            <img src="./imagens/logo_pink.png" alt="footer logo" width="100vh">
+            <section id="contato">
+                <h2 class="contato-h2">Contato</h2>
+                <div class="contato-p">
+                    <p>Precisando de ilustração para algum trabalho?</p>
+                    <p>vamos conversar!</p>
+                </div>
+                <address class="contato-email">rairasenacontato@gmail.com</address>
+                <div class="social">
+                    <img src="./imagens/social.svg" alt="social" />
+                </div>
+            </section>
+            <img src="./imagens/logo_pink.png" alt="footer logo" width="100vh" />
         </footer>
-        <script>
-          // var sobre = window.document.querySelector('#navegacao')
-          // sobre.style.background = 'var(--secundaria)' ;  
-          let lastKnownScrollPosition = 0;
-          let ticking = false;
-           var navega = window.document.getElementById('navegacao')
-           //var corpo = document.querySelector('#body')
-           function entrar() {
-             navega.style.background = 'var(--primaria)' 
-
-           }
-           function sair() {
-             navega.style.background = 'var(--secundaria)' 
-           }
-
-           //function rolar2() {
-          //  alert("User scrolled down!");
-
-          // }
-          // function rolar() {
-         //   alert('ok')
-
-          // }
-
-        </script>
-
-</body></html>
+        <script></script>
+    </body>
+</html>
