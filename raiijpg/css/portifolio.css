@@ -1,0 +1,91 @@
+
+/* PORTIFOLIO */
+
+    #cliente {
+        padding-top: 4rem;
+    }
+
+    .cliente-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .portifolio-galeria {  
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em 1em;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "lg-img sm-img"
+          "lg-img sm-img-2";
+      }
+      
+      .lg-img { grid-area: lg-img; position: relative;}
+      
+      .sm-img { grid-area: sm-img; position: relative;}
+      
+      .sm-img-2 { grid-area: sm-img-2; position: relative;}
+      
+      .galeria-projetos-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .galeria-projetos-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+/* MEDIA QUERY */
+
+@media (max-width: 860px) {
+
+    main {
+        width: 90%;
+    }
+    #header-container {
+        background-size: cover;
+        height: fit-content;
+    }
+
+    .galeria-projetos {
+        position: relative;
+        width: 16dvh;
+        height: 16dvh;
+      }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre-container-p {
+        width: 100%;
+    }
+
+    #galeria {
+        width: 100%;
+    }
+
+    .portifolio-galeria {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

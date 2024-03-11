@@ -6,22 +6,24 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+
     </head>
-    <body id="body" onscroll="rolar2 ()">
+    <body id="body">
         <div id="header-container">
             <header>
-                <img src="./imagens/logo_light.png" alt="logo" class="header-logo" />
+                <img src="./imagens/logo_light.png" alt="logo" class="header-logo" onscroll="rolar2 ()" />
                 <nav id="navegacao">
                     <ul>
                         <li>
                             <a href="#inicio">Início</a>
                         </li>
                         <li>
-                            <a href="#portifolio">Portifólio</a>
+                            <a href="/portifolio.html">Portifólio</a>
                         </li>
                         <li>
-                            <a href="#sobre">Sobre mim</a>
+                            <a href="/sobre">Sobre mim</a>
                         </li>
                     </ul>
                 </nav>
@@ -52,7 +54,7 @@
                 <hr />
 
                 <div id="galeria">
-                    <div class="galeria-projetos-lg">
+                    <div class="galeria-projetos-lg galeria-projetos">
                             <img class="galeria-projetos-img" src="./imagens/projetos/p1.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
@@ -118,6 +120,19 @@
             </section>
             <img src="./imagens/logo_pink.png" alt="footer logo" width="100vh" />
         </footer>
-        <script></script>
-    </body>
+        <script>
+            window.onscroll = function() {rolar2()};
+        
+            function rolar2() {
+                var headerHeight = document.getElementById('header-container').offsetHeight;
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+                if (scrollTop > headerHeight) {
+                    document.getElementById('navegacao').classList.add('menu-scrolled');
+                } else {
+                    document.getElementById('navegacao').classList.remove('menu-scrolled');
+                }
+            }
+        </script>
+            </body>
 </html>
