@@ -6,15 +6,13 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/base.css" />
-        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/template.css" />
 
     </head>
     <body id="body">
-        <div id="header-container">
             <header>
                 <img src="./imagens/logo_light.png" alt="logo" class="header-logo" onscroll="rolar2 ()" />
-                <nav id="navegacao">
+                <nav>
                     <ul>
                         <li>
                             <a href="#inicio">Início</a>
@@ -29,13 +27,12 @@
                 </nav>
             </header>
             <div class="header-cover"></div>
-        </div>
 
-        <main class="main">
+        <main>
             <section id="sobre">
                 <h2>Quem sou eu?</h2>
                 <hr />
-                <div class="sobre-container">
+                <div class="container flex-center">
                     <img src="./imagens/rairasena.png" class="sobre-img" />
                     <div class="sobre-container-p">
                     <p>
@@ -52,56 +49,53 @@
             <section id="portifolio">
                 <h2>Portifólio</h2>
                 <hr />
-
-                <div id="galeria">
-                    <div class="galeria-projetos-lg galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p1.png" alt="" />
+                <div class="galeria3x3">
+                    <div class="galeria-projetos">
+                            <img src="./imagens/projetos/p1.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
-                            </div>
                     </div>
-                    <div class="galeria-projetos-sm">
+                    </div>
                         <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p2.png" alt="" />
+                            <img src="./imagens/projetos/p2.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
                             </div>
                         </div>
                         <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p3.png" alt="" />
-                            <div class="overlay">
-                                <div class="text">texto</div>
-                            </div>
-                        </div>
-
-                        <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p4.png" alt="" />
+                            <img src="./imagens/projetos/p3.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
                             </div>
                         </div>
 
                         <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p5.png" alt="" />
+                            <img src="./imagens/projetos/p4.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
                             </div>
                         </div>
 
                         <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p6.png" alt="" />
+                            <img src="./imagens/projetos/p5.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
                             </div>
                         </div>
 
                         <div class="galeria-projetos">
-                            <img class="galeria-projetos-img" src="./imagens/projetos/p7.png" alt="" />
+                            <img src="./imagens/projetos/p6.png" alt="" />
                             <div class="overlay">
                                 <div class="text">texto</div>
                             </div>
                         </div>
-                </div>
+
+                        <div class="galeria-projetos">
+                            <img src="./imagens/projetos/p7.png" alt="" />
+                            <div class="overlay">
+                                <div class="text">texto</div>
+                            </div>
+                        </div>
                 <button class="galeria-botao">Ver mais</button>
 
             </section>
@@ -120,19 +114,6 @@
             </section>
             <img src="./imagens/logo_pink.png" alt="footer logo" width="100vh" />
         </footer>
-        <script>
-            window.onscroll = function() {rolar2()};
-        
-            function rolar2() {
-                var headerHeight = document.getElementById('header-container').offsetHeight;
-                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        
-                if (scrollTop > headerHeight) {
-                    document.getElementById('navegacao').classList.add('menu-scrolled');
-                } else {
-                    document.getElementById('navegacao').classList.remove('menu-scrolled');
-                }
-            }
-        </script>
+<script src="script.js"></script>
             </body>
 </html>
