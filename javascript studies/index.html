@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="showFrame('calculadora')">Calculadora</button></li>
+                <li><button onclick="showFrame('conversor')">Conversor de minúsculas</button></li>
+                <li><button onclick="showFrame('teste')">Teste</button></li>
+            </ul>
+        </nav>
+    </header>
+<div id="calculadora" class="frame"> 
+<h1>Identificar usuário</h1>
+    <label  for="meuNome">Escreva seu nome: <input id="meuNome" type="text"></input></label>
+    <input for="meuNome" type="submit" value="Enviar" onclick="nome();" />
+    <p id="nomeResposta"></p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatem molestias natus. Rerum sunt numquam distinctio laboriosam nam quam tempora deleniti at, sed laborum voluptatibus iusto error odit quisquam quis?</p>
+</div>   
+<div id="conversor" class="frame"> 
+    <h1>Texto minúsculo para Maiúsculo</h1>
+    <div id="Texto">
+    <label  for="meuTexto">Escreva seu texto: <input id="meuTexto" type="text"></input></label>
+    <div>
+    <input for="meuTexto" type="submit" value="MAIÚSCULAS" onclick="uppercase();" />
+    <input for="meuTexto" type="submit" value="minúsculas" onclick="lowercase();" />
+    <input for="meuTexto" type="submit" value="Primeira Letra" onclick="firstletter();" />
+
+    </div>
+        <h2>Resultado:</h2>
+    <p id="textoResposta"></p>
+    </div>
+
+</div>  
+    <div id="teste" class="frame"> 
+        <h1>Resposive Queries</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatem molestias natus. Rerum sunt numquam distinctio laboriosam nam quam tempora deleniti at, sed laborum voluptatibus iusto error odit quisquam quis?</p>
+        </div>    
+<script src="script.js"></script>
+</body>
+</html>
