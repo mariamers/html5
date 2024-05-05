@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 02 de JS</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <h1> Questão 01</h1>
+      <h2>Você é maior de idade no Brasil? Verifique agora!</h2>
+      <input id="idadeUser" label="idade" min="0" type="number" placeholder="Insira sua idade"></input>
+      <input type="button" value="Calcular" onclick="calculaMaioridade();"></input>
+      <p id="respostaidade"></p>
+
+      <h1> Questão 02</h1>
+      <h2>Calcule sua média</h2>
+      <input id="nota1User" label="nota1" min="0" type="number" placeholder="Insira sua primeira nota:"></input>
+      <input id="nota2User" label="nota1" min="0" type="number" placeholder="Insira sua segunda nota:"></input>
+      <input id="nota3User" label="nota1" min="0" type="number" placeholder="Insira sua terceira nota:"></input>
+      <input type="button" value="Calcular" onclick="calculaMedia();"></input>
+      <p id="respostamedia"></p>
+
+      <h1> Questão 03</h1>
+      <h2>Qual é o maior número real?</h2>
+      <input id="num1User" label="num1" min="0" type="number" placeholder="Insira o primeiro número:"></input>
+      <input id="num2User" label="num2" min="0" type="number" placeholder="Insira o segundo número:"></input>
+      <input id="num3User" label="num3" min="0" type="number" placeholder="Insira o terceiro número:"></input>
+      <input type="button" value="Calcular" onclick="calculaReal();"></input>
+      <p id="respostareal"></p>
+
+      <h1> Questão 04</h1>
+      <h2>Descubra a classificação do nadador:</h2>
+      <input id="idadeNadador" label="idadeN" min="0" type="number" placeholder="Insira a idade do nadador:"></input>
+      <input type="button" value="Calcular" onclick="calculaClassificacao();"></input>
+      <p id="respostaclassificacao"></p>
+
+      <h1> Questão 05</h1>
+      <h2>Descubra se o triângulo é Equilatero, isóceles ou escaleno:</h2>
+      
+      <input id="lado1" label="lado1" min="0" type="number" placeholder="Informe o lado 1::"></input>
+      <input id="lado2" label="lado2" min="0" type="number" placeholder="Informe o lado 2:"></input>
+      <input id="lado3" label="lado3" min="0" type="number" placeholder="Informe o lado 3:"></input>
+      <input type="button" value="Calcular" onclick="calculaTriangulo();"></input>
+      <p id="respostatriangulo"></p>
+
+
+      <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

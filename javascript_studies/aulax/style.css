@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(236, 168, 222);
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#circle {
+    margin: 25vh 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+.sana {
+    margin: 25vh 25vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.bola-alterada {
+    background-color: blueviolet;
+    transition: 2s;
+}
+
+.bola-alterada2 {
+    background-color: transparent;
+    transition: 2s;
+}
+
+#texto {
+    position: relative;
+}
+.texto-invisivel {
+    opacity: 0;
+     transition: 2s;
+
+}
+
+.texto-visivel {
+    opacity: 1;
+    transition: 2s;
+    transform: scale(1.5);
+}
