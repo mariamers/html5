@@ -10,6 +10,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 
@@ -21,6 +22,7 @@
     --primaria: #f366a3;
     --variacao-primaria: #b94e7c;
     --secundaria: #ffe8e8;
+    --variacao-secundaria: #b94e7c6c;
     --fundo: #fff9f1;
     --texto: #222222;
     --variacao-texto: #fff9f1;
@@ -37,7 +39,13 @@ h2 {
     padding-bottom: 0.5em;
 }
 
-h3,
+h3 {
+    font-family: "Nunito";
+    color: var(--secundaria);
+    font-size: 3em;
+    text-align: left;
+    padding-bottom: 0.5em;
+}
 h4,
 h5,
 h6 {
@@ -52,21 +60,21 @@ button:focus {
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 150%;
     text-align: left;
-    font-family: "Roboto";
+    font-family: "Nunito";
     color: var(--texto);
     padding-bottom: 0.5em;
-    text-align: justify;
 
 
 }
 
 nav,
 button {
-    font-family: "Roboto";
+    font-family: "Nunito";
     font-weight: 500;
+    cursor: pointer;
 }
 
 .text {
@@ -84,28 +92,19 @@ button {
 
 html {
     min-width: 350px;
-    font-family: "Roboto";
+    font-family: "Nunito";
     color: var(--texto);
     background-color: var(--fundo);
     scroll-behavior: smooth;
-
-}
-
-section {
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    scroll-behavior: smooth;
-
+    font-size: 16px;
 }
 
 .container {
     overflow: auto;
     padding: 1em;
-    border-radius: 3vw 4vw 8vw 2vw;
     text-align: center;
-    width: 100%;
-    transition: 0.5s;
+    width: 70%;
+    transition: all 100ms ease-in-out;
     & img {
         width: 35%;
     }
@@ -116,6 +115,10 @@ section {
 
 .pink-img {
     border: var(--primaria) solid 0.3rem;
+    &:hover {
+        scale: 105%;
+        transition: all 100ms ease-in-out;
+    }
 }
 
 .flex-center {
@@ -139,31 +142,32 @@ header {
     flex-direction: row;
     gap: 1em;
     position: relative;
-    & img {
-        height: 10vh;
+
         & div {
             width: 100%;
             position: absolute;
         }
     }
-}
 
 .cover {
     background-image: url("../imagens/cover.png");
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
+    width: 100%;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
     margin: 0 auto;
 }
 
 section {
     display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     margin: 20px;
@@ -171,6 +175,9 @@ section {
         width: 100%;
         height: 100%;
     }
+}
+.pink {
+    background-color: var(--primaria);
 }
 .overlay {
     position: absolute;
@@ -182,8 +189,8 @@ section {
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    border-radius: 3vw 4vw 8vw 2vw;
-    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.493);
     cursor: pointer;
 }
 @layer grid {
@@ -193,6 +200,7 @@ section {
             grid-template-rows: auto auto auto;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+            width: 70%;
             & div.galeria-projetos {
                 position: relative;
 
@@ -202,6 +210,7 @@ section {
                     position: relative;
                 }
             }
+            
         }
     }
     .destaque {
@@ -214,6 +223,7 @@ section {
     @layer grid2x2 {
         .galeria2x2 {
             display: grid;
+            width: 70%;
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -236,6 +246,7 @@ section {
             grid-template-columns: repeat(3, 1fr);
             grid-auto-flow: dense;
             direction: rtl;
+            
         }
     }
 }
@@ -244,7 +255,6 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap);
-    padding: var(--gap);
 }
 
 .grid-item {
@@ -253,11 +263,19 @@ section {
     text-align: center;
     border-radius: 0.5rem;
     color: #fff; /* cor do texto */
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .galeria-projetos:hover .overlay {
     opacity: 1;
+    scale:105%;
+    transition: all 100ms ease-in-out;
+}
+
+.galeria-projetos:hover img {
+    scale:105%;
+    transition: all 100ms ease-in-out;
+
 }
 
 footer {
@@ -291,34 +309,7 @@ footer {
 
 /* COMPONENTES */
 
-nav {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 0.3rem 2rem 0.3rem 2rem;
-    & ul {
-        display: flex;
-        gap: 3em;
-        padding: 1em;
-        align-items: center;
-        list-style-type: none;
-        justify-content: flex-end;
-        & a {
-            text-decoration: none;
-            color: var(--texto);
-            & :hover {
-                color: var(--variacao-primaria);
-            }
-        }
-    }
-}
-.menu-scrolled {
-    background-color: var(--fundo);
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-}
+
 
 button {
     padding: 1em 2em;
@@ -330,14 +321,26 @@ button {
     align-self: end;
     justify-self: end;
     margin: 1em;
+    transition: all 100ms ease-in;
 
     &:hover {
         background-color: var(--variacao-primaria);
+        scale: 105%;
     }
 
     &:active {
         opacity: 0.8;
         transform: scale(0.98);
+    }
+}
+.button-variacao {
+    background-color: var(--variacao-secundaria);
+    color: var(--variacao-texto);
+    border: 2px solid var(--variacao-secundaria);
+    &:hover {
+        opacity: 100%;
+        color: var(--variacao-texto);
+
     }
 }
 
@@ -349,4 +352,8 @@ button {
     .grid-container {
         grid-template-columns: 1fr;
     }
+}
+
+.transition {
+    transition: all 100ms ease-in;
 }

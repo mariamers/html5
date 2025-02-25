@@ -4,54 +4,39 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>raii.jpg</title>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-
 </head>
-
 <body id="body">
     <header class="cover">
-        <img src="./imagens/logo_light.png" alt="logo" class="header-logo" onscroll="rolar2 ()" />
-        <nav>
-            <ul>
-                <li>
-                    <a href="http://127.0.0.1:5500/raiijpg/">Início</a>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:5500/raiijpg/portifolio.html">Portifólio</a>
-                </li>
-                <li>
-                    <a href="/sobre">Sobre mim</a>
-                </li>
-            </ul>
-        </nav>
+        <nav-bar></nav-bar>
     </header>
     <main>
         <section id="sobre">
             <div class="container w50 flex-center justify-between">
                 <img src="./imagens/raii.jpg" class="pink-img rounded" />
                 <div class="container w50">
-                    <h2>Quem sou eu?</h2>
+                    <h2>Oii, sou Raira Sena!</h2>
                     <p>
-                        Oii, sou Raira Sena!
                         Assino na internet como Raii.jpg. Tenho 24 anos, sou ilustradora de João Pessoa,
                         graduanda em Comunicação em Mídias Digitais. Gosto muito de criar arte em formatos e midias
                         diferentes!
                         Atualmente, estou terminando o curso de Comunicação Mídias Digitais na UFPB.
                     </p>
-                    <aside>
-                        <p><b>Redes sociais:</b></p>
-                        <div class="grid-container">
-                            <div class="grid-item">Item 1</div>
-                            <div class="grid-item">Item 2</div>
-
-                        </div>
-                    </aside>
                 </div>
 
             </div>
+        </section>
+        <section id="redes" class="pink">
+            <aside class="container w50 flex-center justify-between">
+                <h3>Conheça minhas <br> redes sociais</br></h3>
+                <div class="grid-container">
+                    <button class="grid-item button-variacao">Instagram</button>
+                    <button class="grid-item button-variacao">Behance</button>
+
+                </div>
+            </aside>
         </section>
         <section id="portifolio">
             <h2>Portifólio</h2>
@@ -104,8 +89,7 @@
                     </div>
                 </div>
                 <button class="galeria-botao">Ver mais</button>
-
-        </section>
+            </div>
     </main>
     <footer class="footer">
         <h2 class="contato-h2">Contato</h2>
@@ -121,7 +105,7 @@
             <img src="./imagens/logo_pink.png" alt="footer logo" class="footer-logo" />
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
