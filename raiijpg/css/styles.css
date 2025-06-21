@@ -168,7 +168,6 @@ main {
     margin: 0 auto;
     padding-top: 100px;
 }
-
 section {
     display: flex;
     align-items: center;
@@ -178,10 +177,6 @@ section {
     align-items: center;
     margin: 20px;
 
-    & img {
-        width: 100%;
-        height: auto;
-    }
 }
 .pink {
     background-color: var(--primaria);
@@ -306,7 +301,7 @@ footer {
     gap: 120px;
     flex-direction: row;
     img {
-        width: 40%;
+        width: 40vh;
     }
     img:hover {
         scale:105%;
@@ -314,46 +309,63 @@ footer {
     }
 }
 
+#portifolio img {
+                    object-fit: contain;
+
+}
+
 .paper {
      background-image: url(../imagens/paper.png);
         background-size: contain;
         background-position: right;
-        padding-left: 80px;
         background-repeat: no-repeat;
-}
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 80px;
+    }
 
 .meio {
     grid-column-start:2;
     grid-row-start: 1;
     grid-row-end: 3;
-    margin-top: -180px;
     img {
-        background-image:none!important;
-        
+        object-fit: contain;
     }
 }
 
-.star::after {
-content: "";
-background-image: url(../imagens/star.png);
-    position: absolute;
-    width: 30px;
-}
+.star {
+      position: absolute;
+      background-image: url('../imagens/star.png');
+      background-size: cover;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      z-index: -1;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      animation: float 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(10px);
+      }
+    }
+
 
 
 
 
 .inicio {
-        margin-top: -200px;
-        img {
-
+        top: -200px;
         background-image: url(../imagens/paper.png);
         background-size: contain;
         background-position: right;
         padding-left: 80px;
-        background-repeat: no-repeat;
-              }
-  
+        background-repeat: no-repeat;  
+
 }
 
 .inicio p {
@@ -363,9 +375,13 @@ background-image: url(../imagens/star.png);
 .up {
  margin-top: -80px;    
 }
+
 .galeria-projetos:hover .overlay {
     opacity: 1;
-    scale:105%;
+        scale:105%;
+
+        width: 100%;
+    height: 100%;
     transition: all 100ms ease-in-out;
 }
 
@@ -377,6 +393,13 @@ background-image: url(../imagens/star.png);
 
 }
 
+.galeria-projetos img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
 /* COMPONENTES */
 
 

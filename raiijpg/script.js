@@ -88,3 +88,25 @@ class NavBar extends HTMLElement {
 }
 
 customElements.define('nav-bar', NavBar);
+  const totalStars = 20; 
+  const body = document.body;
+
+  for (let i = 0; i < totalStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    const size = Math.random() * 100 + 10;
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+
+    const posX = Math.random() * window.innerWidth -130 ;
+  const posY = Math.random() * window.innerHeight * 2;  
+    star.style.left = posX + 'px';
+    star.style.top = posY + 'px';
+
+    star.style.opacity = Math.random() * 0.5 + 0.5;
+
+    star.style.animationDelay = Math.random() * 5 + 's';
+
+    body.appendChild(star);
+  }
