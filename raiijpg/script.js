@@ -14,12 +14,18 @@ template.innerHTML = `
         nav {
         padding: 0.3rem 10rem;
         display: flex;
+        height: 100px;
         justify-content: space-between;
         & img {
         height: 10vh;
         flex-shrink: 0;
         cursor: pointer; 
         }
+            .header-logo {
+        height: 150px;
+        position:relative;
+        top: -24px;
+    }
     & ul {
         display: flex;
         gap: 3em;
@@ -29,29 +35,29 @@ template.innerHTML = `
         list-style-type: none;
         justify-content: flex-end;
         & a {
+            font-family: monospace;
             text-decoration: none;
-            color: var(--texto);
+            color: var(--primaria);
         }
             & :hover {
+            color: var(--variacao-primaria);
                 font-weight: bold;
                     transition: all 100ms ease-in;
             }
     }
 }
 .menu-scrolled {
-    background-color: var(--primaria);
+    background-color: var(--fundo);
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
     transition: 0.5s;
-    & a {
-        color: var(--variacao-texto);
-    }
+
 }
     </style>
 <div class="menu">
 <nav>        
-    <img src="./imagens/logo_light.png" alt="logo" class="header-logo" onclick="location.href='/raiijpg';"/>
+    <img src="./imagens/logoAnimado.gif" alt="logo" class="header-logo" onclick="location.href='/sobre';"/>
     <ul>
-        <li><a href="/raiijpg">Início</a></li>
+        <li><a href="sobre.html">Início</a></li>
         <li><a href="portifolio.html">Portifólio</a></li>
         <li><a href="sobre.html">Sobre mim</a></li>
     </ul>
