@@ -104,7 +104,7 @@ customElements.define('nav-bar', NavBar);
     star.style.left = posX + 'px';
     star.style.top = posY + 'px';
 
-    star.style.opacity = Math.random() * 0.5 + 0.5;
+    star.style.opacity = Math.random() * 0.5 + 0.2;
 
     star.style.animationDelay = Math.random() * 5 + 's';
 
