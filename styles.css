@@ -1,0 +1,353 @@
+/* MARIA RAMOS */
+
+/* ATOMOS */
+
+:root {
+    --cor0: #a8f9ff;
+    --cor1: #ffffff;
+    --cor2: #9f05f8;
+    --cor3: #00eeff;
+    --cor4: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+#wrapper {
+    background-color: var(--cor1);
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "aside main main"
+        "footer footer footer";
+    grid-template-columns: 30vh auto auto;
+    grid-template-rows: auto auto auto auto;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+/*textos*/
+
+h1,
+h2,
+h3,
+h4,
+a,
+aside {
+    font-family: Agrandir;
+}
+
+h1 {}
+
+h2 {
+    
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {}
+
+p, span, input, textarea, button {
+    font-family: Work Sans;
+    font-size: 16px;
+}
+
+.button, button {
+	background-color: var(--cor2);
+	border-radius: 1rem;
+	padding: 1rem;
+    font-weight: bolder;
+    color: var(--cor1);
+
+}
+
+button:hover {
+	color:var(--cor0);
+}
+/* recursos uteis */
+
+.blur {}
+
+.padding_s {}
+
+/* MOLECULAS */
+
+.card {
+    padding: 30px;
+    border-radius: 24px;
+    background-color: var(--cor0);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 32px;
+    min-width: 70%;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.form_items {
+    background-color: var(--cor0);
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+
+    
+}
+
+/* ORGANISMOS */
+
+/*header*/
+
+.logo {
+    grid-area: logo;
+}
+
+.title {
+    grid-area: title;
+}
+
+.subtitle {
+    grid-area: subtitle;
+}
+
+.enterprise {
+    grid-area: enterprise;
+    width: 64px;
+}
+
+.header {
+    padding: 2rem;
+    padding-top: 4rem;
+    grid-area: header;
+    display: flex;
+    row-gap: 0.1rem;
+    display: grid;
+    column-gap: 2rem;
+    grid-template-areas:
+        "logo title title enterprise"
+        "logo subtitle subtitle enterprise";
+    align-items: start;
+    grid-template-columns: 10vh auto auto 10vh;
+    grid-template-rows: 4vh 2vh;
+    background-color: var(--cor3);
+
+}
+
+section {
+    padding-bottom: 10vh;
+}
+
+/*menu*/
+
+.topnav {
+    overflow: hidden;
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--cor2);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 14px 16px;
+    font-size: 18px;
+    color: var(--cor1);
+}
+
+.topnav a:hover {
+    color: var(--cor0);
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/*menu lateral*/
+
+.aside {
+    grid-area: aside;
+    background: var(--cor0);
+    min-width: 40%;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+/*conteudo principal*/
+
+.main {
+    grid-area: main;
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    width: 80%;
+    grid-template-areas:
+        "sobre"
+        "curriculo";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    height: fit-content;
+    height: auto;
+    padding: 1rem;
+}
+
+/*cards*/
+
+.card_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    overflow: auto;
+
+}
+
+/*rodape*/
+.footer {
+    grid-area: footer;
+    background: var(--cor4);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.footer>ul li a {
+    color: var(--cor3);
+}
+
+.footer svg {
+    fill: var(--cor3);
+}
+
+
+/*TEMPLATES*/
+
+.sobre {
+    grid-area: sobre;
+    display: grid;
+    grid-template-areas: "direita esquerda";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.curriculo {
+    grid-area: curriculo;
+}
+
+.direita {
+    grid-area: direita;
+}
+
+.esquerda {
+    grid-area: esquerda;
+}
+
+.contato {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*RESPONSIVO*/
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav a.icon:hover {
+        color: var(--cor1);
+    }
+
+    .topnav {
+        justify-content: space-between;
+
+    }
+
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+
+
+    .main,
+    .aside {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .header-content {
+        display: none;
+    }
+
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    #wrapper, .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .responsive {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+}
