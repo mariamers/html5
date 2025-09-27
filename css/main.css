@@ -25,12 +25,14 @@
     grid-template-areas:
         "header header header"
         "nav nav nav"
+        "opening opening opening"
         "aside main main"
         "footer footer footer";
     grid-template-columns: 30vh auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     width: 100%;
     flex-direction: row-reverse;
+    overflow: visible;
 }
 
 /*textos*/
@@ -41,24 +43,18 @@ h3,
 h4,
 a,
 aside {
-    font-family: Agrandir;
+    font-family: Agrandir, Syne;
 }
 
-h1 {}
-
-h2 {
-    
-}
 
 h3 {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
-h4 {}
 
 p, span, input, textarea, button {
     font-family: Work Sans;
-    font-size: 16px;
+    font-size: 1.3rem;
 }
 
 .button, button {
@@ -75,9 +71,8 @@ button:hover {
 }
 /* recursos uteis */
 
-.blur {}
 
-.padding_s {}
+
 
 /* MOLECULAS */
 
@@ -112,9 +107,44 @@ button:hover {
 
 /*header*/
 
+header {    
+    grid-area: header;
+}
+.opening {
+    min-width: 100vh;
+    background-color: var(--cor3);
+    padding: 20vh;
+    font-size: 4rem;
+    line-height: 0.8;
+    min-height: 100vh;
+    animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    grid-area: opening;
+    z-index: -1;
+    position: sticky;
+    top: 0;
+
+}
+.title-principal {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: fit-content;
+}
+.title-principal > div:hover {
+    text-decoration: underline;
+    color: #9f05f8;
+}
+@keyframes pulse {
+    /* Rotating it along with the scale makes it a little bit more fancy */
+    0% { transform: scale(0) rotate(33deg); }
+    35%, 65% { transform: scale(1) rotate(0deg); }
+}
 .logo {
     grid-area: logo;
 }
+
 
 .title {
     grid-area: title;
@@ -132,7 +162,6 @@ button:hover {
 .header {
     padding: 2rem;
     padding-top: 4rem;
-    grid-area: header;
     display: flex;
     row-gap: 0.1rem;
     display: grid;
@@ -144,25 +173,41 @@ button:hover {
     grid-template-columns: 10vh auto auto 10vh;
     grid-template-rows: 4vh 2vh;
     background-color: var(--cor3);
+    position: sticky;
+    display: none;
 
 }
 
 section {
-    padding-bottom: 10vh;
+    padding: 10vh;
+    min-height: 60vh;
+
 }
 
 /*menu*/
 
 .topnav {
+    transition: transform 0.3s ease;
+    position:sticky;
+    top: 0px;
     overflow: hidden;
     grid-area: nav;
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: var(--cor2);
+
+}
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
 }
 
 .topnav a {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
     float: left;
     display: block;
     text-align: center;
@@ -190,24 +235,22 @@ section {
     display: flex;
     justify-content: center;
     padding-top: 32px;
+    position: sticky;
+    top: 53px;
+    height: 100vh;
 }
 
 /*conteudo principal*/
 
 .main {
     grid-area: main;
-    display: grid;
+    display: flex;
     gap: 1rem;
     justify-items: center;
-    width: 80%;
-    grid-template-areas:
-        "sobre"
-        "curriculo";
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    flex-direction: column;
     height: fit-content;
     height: auto;
-    padding: 1rem;
+    background-color: var(--cor1);
 }
 
 /*cards*/
@@ -251,8 +294,8 @@ section {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     gap: 1.5rem;
-    padding: 1rem;
     width: 100%;
+
 }
 
 .curriculo {
@@ -261,6 +304,7 @@ section {
 
 .direita {
     grid-area: direita;
+    width: 300px;
 }
 
 .esquerda {
