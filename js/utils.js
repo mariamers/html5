@@ -1,5 +1,3 @@
-
-
 function nome() {
     var meuNome = (document.getElementById('meuNome').value);
     var meuNomeResposta = document.getElementById("nomeResposta");

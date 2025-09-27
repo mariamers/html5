@@ -4,58 +4,87 @@
 <head>
     <title>Maria</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/components/header.js" type="text/javascript" defer></script>
 </head>
 
 <body id="wrapper">
-    
-    <header>
-     <div class="header">
-            <img src="assets/logo.svg" alt="logo" class="logo">
-            <h1 class="title header-content">Mariaaaaa</h1>
-            <h2 class="subtitle header-content">projetos e serviços</h2>
-            <img class="enterprise header-content" src="/assets/search.svg" alt="procurar" width="100px">
-        </div>
-    </header>
-    <nav class="topnav" id="myTopnav">
-        <a href="/" class="active">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#curriculo">Currículo</a>
-        <a href="utils.html">Utilidades</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-        <a href="#faq">FAQ</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </nav>
-            <section class="opening">
-        <h1 class="title-principal"> <div>criando</div> <div>projetos</div> <div>bonitinhos</div> <div>e úteis</div>
+    <header-component class="header-component"></header-component>
+    <section class="opening">
+        <h1 class="title-principal">
+            <div>criando</div>
+            <div>projetos</div>
+            <div>bonitinhos</div>
+            <div>e úteis</div>
     </section>
-    <aside class="aside">Projetos em Destaque</aside>
+    <aside class="aside">
+        <h4>Projetos em Destaque</h4>
+        <ul>
+        </ul>
+        <script>
+            const listProjects = document.querySelector('ul')
+            fetch('js/projects.json')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(project => {
+                        listProjects.insertAdjacentHTML('beforeend', `<li><a href="${project.link}">${project.name}</a><li/>`);
+                    })
+                });
+        </script>
+    </aside>
     <main class="main">
         <section class="responsive sobre" id="sobre">
             <img src="/assets/profile.png" class="direita" width="200px">
             <div class="esquerda">
                 <h3>webdesginer e mil outras coisas</h3>
                 <p>
-                    Sou estudante de Comunicação em Mídias Digitais na UFPB, onde também desenvolvo pesquisas científicas na
-                    área de Design de interfaces e Inteligência Artificial. Sou apaixonada por tecnologias da comunicação,
+                    Sou estudante de Comunicação em Mídias Digitais na UFPB, onde também desenvolvo pesquisas
+                    científicas na
+                    área de Design de interfaces e Inteligência Artificial. Sou apaixonada por tecnologias da
+                    comunicação,
                     arte moderna e amo aprender sobre design em diferentes culturas. Tenho conhecimento nas áreas de
                     desenvolvimento web, webdesign, design gráfico e gestão de projetos.
                 </p>
             </div>
         </section>
         <section class="curriculo" id="curriculo">
-            <h3>Currículo</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quidem, soluta numquam aperiam assumenda
-                vel cumque reiciendis eos animi? Ipsum iure provident ducimus illo delectus explicabo, quibusdam quasi
-                doloribus est.</p>
-        </section>
-        <section class="projetos" id="projetos">
+            <div class="bullet-list">
+                <h3>Currículo</h3>
+                <div class="bullet-item">
+                    <h4>University Sentiment Analysis</h4>
+                    <ul>
+                        <li>
+                            Conducted sentiment analysis research on students at Federal University of Paraiba.
+                            Collected and analyzed text data to understand emotional trends among students, using
+                            natural language processing techniques. Developed custom sentiment analysis algorithms and
+                            visualizations to gain insights into the university's student body emotions. </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="bullet-item">
+                    <h4>Virtual Learning Environment Enhancement</h4>
+                    <ul>
+                        <li>
+                            Collaborating with SEAD to improve the user interface and experience of their online
+                            learning platform. </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="bullet-item">
+                    <h4>Graphic Design Portfolio Website</h4>
+                    <ul>
+                        <li>
+                            Designed and developed a personal portfolio website showcasing a diverse range of graphic
+                            design projects.
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <img src="/assets/stars.jpeg" class="direita" width="200px">
+
+        </section>
+
+        <section class="projetos" id="projetos">
             <h3>Projetos</h3>
             <div class="card_wrapper">
                 <div class="card">
@@ -86,35 +115,17 @@
                 <h3>Contato</h3>
                 <p>Entre em contato para fazermos um orçamento.</p>
             </div>
-              <form action="https://docs.google.com/forms/d/e/1FAIpQLSeOYA6i9eA_7Qew8QmFKMmjzjvrCtSLyE8yhOVG3HKXVBeffA/formResponse" class="form">
-                <input
-                  type="text"
-                  name="entry.2005620554"
-                  placeholder="Nome"
-                  class="form_items"
-                />
-                <input
-                  type="email"
-                  name="entry.1045781291"
-                  placeholder="Email"
-                  class="form_items"
-                />
-                <input
-                  type="text"
-                  placeholder="Telefone"
-                  name="entry.1166974658"
-                  class="form_items"
-                />
-                <textarea
-                  placeholder="Messagem"
-                  rows="6"
-                  name="entry.839337160"
-                  class="form_items"
-                ></textarea>
+            <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeOYA6i9eA_7Qew8QmFKMmjzjvrCtSLyE8yhOVG3HKXVBeffA/formResponse"
+                class="form">
+                <input type="text" name="entry.2005620554" placeholder="Nome" class="form_items" />
+                <input type="email" name="entry.1045781291" placeholder="Email" class="form_items" />
+                <input type="text" placeholder="Telefone" name="entry.1166974658" class="form_items" />
+                <textarea placeholder="Messagem" rows="6" name="entry.839337160" class="form_items"></textarea>
                 <button type="submit" value="submit" class="button">Entre em contato</button>
-              </form>
+            </form>
         </section>
-                <section class="FAQ" id="FAQ">
+        <section class="FAQ" id="FAQ">
             <h3>Perguntas Frequentes</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quidem, soluta numquam aperiam assumenda
                 vel cumque reiciendis eos animi? Ipsum iure provident ducimus illo delectus explicabo, quibusdam quasi
@@ -168,20 +179,7 @@
         </ul>
         <img src="/assets/logo inverse.svg" alt="footer logo" width="100vh">
     </footer>
-    <script>
-
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-
-
-        }
-    </script>
-    <script type="module" src="js/main.js"></script>
+    
 </body>
 
 </html>

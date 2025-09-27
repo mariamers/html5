@@ -7,7 +7,15 @@
     --cor1: #ffffff;
     --cor2: #9f05f8;
     --cor3: #00eeff;
-    --cor4: #000000;
+    --cor4: #000000; /* texto escuro */
+}
+
+.dark {
+  --cor0: #082b2e; /* azul petróleo escuro */
+  --cor1: #121212; /* fundo quase preto */
+  --cor2: #bb86fc; /* roxo suave */
+  --cor3: #03dac6; /* ciano esverdeado */
+  --cor4: #e0e0e0; /* texto claro */
 }
 
 * {
@@ -24,7 +32,6 @@
     display: grid;
     grid-template-areas:
         "header header header"
-        "nav nav nav"
         "opening opening opening"
         "aside main main"
         "footer footer footer";
@@ -44,6 +51,8 @@ h4,
 a,
 aside {
     font-family: Agrandir, Syne;
+            color: var(--cor4);
+
 }
 
 
@@ -52,9 +61,11 @@ h3 {
 }
 
 
-p, span, input, textarea, button {
+p, span, input, textarea, button, li {
     font-family: Work Sans;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+        color: var(--cor4);
+
 }
 
 .button, button {
@@ -63,6 +74,7 @@ p, span, input, textarea, button {
 	padding: 1rem;
     font-weight: bolder;
     color: var(--cor1);
+    cursor: pointer;
 
 }
 
@@ -103,17 +115,46 @@ button:hover {
     
 }
 
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 80%;
+}
+
+.bullet-item li {
+list-style-type: circle;
+margin-left: 32px;
+}
+
+#theme-switch i{
+    color: var(--cor1);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.dark #theme-switch i:first-child {
+    display: none;
+}
+
+.dark #theme-switch i:last-child {
+    display: block;
+}
+
 /* ORGANISMOS */
 
 /*header*/
 
-header {    
+.header-component {    
     grid-area: header;
 }
 .opening {
     min-width: 100vh;
     background-color: var(--cor3);
     padding: 20vh;
+    margin-top: 52px;
     font-size: 4rem;
     line-height: 0.8;
     min-height: 100vh;
@@ -188,14 +229,15 @@ section {
 
 .topnav {
     transition: transform 0.3s ease;
-    position:sticky;
+    position:fixed;
     top: 0px;
     overflow: hidden;
-    grid-area: nav;
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: var(--cor2);
+            z-index: 2;
+
 
 }
 @keyframes animate-fade {
@@ -233,11 +275,12 @@ section {
     background: var(--cor0);
     min-width: 40%;
     display: flex;
-    justify-content: center;
-    padding-top: 32px;
+    flex-direction: column;
+    padding: 32px;
     position: sticky;
     top: 53px;
     height: 100vh;
+    z-index: 1;
 }
 
 /*conteudo principal*/
@@ -253,6 +296,11 @@ section {
     background-color: var(--cor1);
 }
 
+.curriculo {
+    display: flex;
+    gap: 32px;
+}
+
 /*cards*/
 
 .card_wrapper {
@@ -262,6 +310,7 @@ section {
     overflow: auto;
 
 }
+
 
 /*rodape*/
 .footer {
@@ -273,10 +322,12 @@ section {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    z-index: 1;
 
 }
 
-.footer>ul li a {
+
+.footer>ul li a span {
     color: var(--cor3);
 }
 
@@ -378,6 +429,7 @@ section {
         justify-content: center;
         align-items: center;
         padding: 0;
+
     }
 
     .logo {

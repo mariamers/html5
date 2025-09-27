@@ -1,0 +1,47 @@
+[
+
+  {
+    "id": 1,
+    "urlID": "sitedotwice",
+    "name": "Site do Twice",
+    "link": "https://mariamers.github.io/html5/projects/twice/",
+    "image": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "description": "Projeto da disciplina de Internet II, site baseado nos anos 2000"  },
+
+  {
+    "id": 2,
+    "urlID": "javascriptstudies",
+    "name": "Estudos de Javascript",
+    "link": "https://mariamers.github.io/html5/projects/javascript_studies/",
+    "image": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "description": "Estudos de Javascript baseados em conceitos aprendidos em cursos do InstitutoTIM"
+  },
+
+  {
+    "id": 3,
+    "urlID": "comguan",
+    "name": "Com Guan",
+    "link": "https://mariamers.github.io/html5/projects/comguan/",
+    "image": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "description": "Website para o artista com Guan feito na disciplina de Internet II"
+  },
+
+  {
+    "id": 4,
+    "urlID": "ballerini",
+    "name": "Landing page Ballerini",
+    "link": "https://mariamers.github.io/html5/projects/ballerini_landingpage/",
+    "image": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "description": "Landing page baseada em tutorial do canal Ballerini"
+  },
+
+  {
+    "id": 5,
+    "urlID": "ballerini",
+    "name": "Com Guan",
+    "link": "https://mariamers.github.io/html5/projects/ballerini_landingpage/",
+    "image": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "description": "Landing page baseada em tutorial do canal Ballerini"
+  }
+
+]
